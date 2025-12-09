@@ -8,28 +8,27 @@
     </parent>
     <artifactId>ObjetosPresentacion</artifactId>
     <packaging>jar</packaging>
+    
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ObjetosNegocio</artifactId>
             <version>${project.version}</version>
         </dependency>
+        
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>Interfaces</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>Comandos</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+        
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>Comandos</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+    
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>objetosPresentacion.ObjetosPresentacion</exec.mainClass>

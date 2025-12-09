@@ -1,10 +1,14 @@
 
 package deserializador;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+
 import comandosRespuesta.ComandoCambioTurno;
 import comandosRespuesta.ComandoFinPartida;
 import comandosRespuesta.ComandoIniciarTurno;
@@ -13,10 +17,11 @@ import comandosRespuesta.ComandoJugadorPartidaGanada;
 import comandosRespuesta.ComandoPartidaGanada;
 import comandosRespuesta.ComandoRespuestaAbandonar;
 import comandosRespuesta.ComandoRespuestaConfirmacionSolicitarFin;
-import comandosRespuesta.ComandoRespuestaReestablecer;
 import comandosRespuesta.ComandoRespuestaMovimiento;
+import comandosRespuesta.ComandoRespuestaReestablecer;
 import comandosRespuesta.ComandoRespuestaSolicitarFin;
 import comandosRespuesta.ComandoRespuestaTomarFicha;
+import comandosRespuesta.ComandoRespuestaUnirsePartida;
 import comandosRespuesta.ComandoTableroInvalido;
 import comandosSolicitud.ComandoAbandonar;
 import comandosSolicitud.ComandoAgregarFichasJugador;
@@ -35,8 +40,6 @@ import dto.FichaDTO;
 import interfaces.ICommand;
 import interfaces.IFiltro;
 import interfaces.IReceptorExterno;
-import java.util.HashMap;
-import java.util.Map;
 /**
  *
  * @author ramon
@@ -73,6 +76,10 @@ public class Deserializador implements IReceptorExterno{
         registroComandos.put("ComandoReestablecerTablero", ComandoReestablecerTablero.class);
         registroComandos.put("ComandoSeleccionarFichasTablero", ComandoSeleccionarFichasTablero.class);
         registroComandos.put("ComandoTerminarTurno", ComandoTerminarTurno.class);
+
+    
+        // ... dentro de registrarComandos():
+        registroComandos.put("ComandoRespuestaUnirsePartida", ComandoRespuestaUnirsePartida.class);
         
         registroComandos.put("ComandoSolicitarFin", ComandoSolicitarFin.class);
         registroComandos.put("ComandoRespuestaSolicitarFin", ComandoRespuestaSolicitarFin.class);

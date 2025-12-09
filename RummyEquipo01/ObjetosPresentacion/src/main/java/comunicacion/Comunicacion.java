@@ -11,8 +11,7 @@ public class Comunicacion implements IComunicacion{
     @Override
     public void inicioTurno(TableroNegocioDTO tableroNegocio) {
         
-        
-        
+      
         
     }
 

@@ -18,6 +18,8 @@
         <module>DirectorioServidor</module>
         <module>EnsambladorCliente</module>
         <module>EnsambladorServidor</module>
+        <module>frmInicio</module>
+        <module>frmLobby</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
